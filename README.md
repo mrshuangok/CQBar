@@ -6,19 +6,37 @@ CQBar：**Codex Quota Bar**，是一款 Windows 上的 Codex 额度显示工具�
 
 ## 界面预览
 
-### 悬浮窗显示与任务栏紧凑显示
+### 紧凑显示
 
-在 悬浮窗或Windows 10 任务栏中并排显示五小时与每周额度。
+紧凑显示提供悬浮窗和任务栏两种形态，展示五小时与每周额度。任务栏形态支持 Windows 10 x64 DeskBand。
 
-![任务栏紧凑显示](docs/images/taskbar-compact.png)
+<table>
+  <thead>
+    <tr><th>悬浮窗紧凑显示</th><th>任务栏紧凑显示</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><img src="docs/images/floating-compact.png" alt="悬浮窗紧凑显示" width="280"></td>
+      <td align="center"><img src="docs/images/taskbar-compact.png" alt="任务栏紧凑显示" width="280"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 悬停查看额度详情
 
 将鼠标悬停在任务栏额度上，可查看剩余比例、已用比例和重置时间。界面支持简体中文与英文。
 
-![简体中文额度详情](docs/images/taskbar-hover-zh.png)
-
-![English usage details](docs/images/taskbar-hover-en.png)
+<table>
+  <thead>
+    <tr><th>简体中文</th><th>English</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><img src="docs/images/taskbar-hover-zh.png" alt="简体中文额度详情" width="320"></td>
+      <td align="center"><img src="docs/images/taskbar-hover-en.png" alt="English usage details" width="320"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 悬浮窗设置
 
