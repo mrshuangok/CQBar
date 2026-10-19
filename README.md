@@ -6,9 +6,9 @@ CQBar 的名称来自 **Codex Quota Bar**，是一款 Windows 上的 Codex 额�
 
 ## 界面预览
 
-### 任务栏紧凑显示
+### 悬浮窗显示与任务栏紧凑显示
 
-在 Windows 10 任务栏中并排显示五小时与每周额度。
+在 悬浮窗或Windows 10 任务栏中并排显示五小时与每周额度。
 
 ![任务栏紧凑显示](docs/images/taskbar-compact.png)
 
