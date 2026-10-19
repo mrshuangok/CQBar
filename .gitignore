@@ -1,0 +1,15 @@
+node_modules/
+dist/
+release/
+src-tauri/target/
+*.log
+.env
+.env.*
+!.env.example
+auth.json
+*.pem
+*.p12
+*.pfx
+*.key
+*.sqlite
+*.sqlite3

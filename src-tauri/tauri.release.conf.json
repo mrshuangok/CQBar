@@ -1,0 +1,19 @@
+{
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "resources": {
+      "target/release/codex-deskband.dll": "codex-deskband.dll",
+      "target/release/deskbandctl.exe": "deskbandctl.exe",
+      "../scripts/deskband-install.ps1": "deskband-install.ps1"
+    },
+    "windows": {
+      "nsis": {
+        "installMode": "perMachine",
+        "languages": ["English", "SimpChinese"],
+        "installerIcon": "icons/icon.ico",
+        "installerHooks": "./windows/deskband-hooks.nsh"
+      }
+    }
+  }
+}

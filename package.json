@@ -1,0 +1,16 @@
+{
+  "name": "codex-quota-float",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Windows floating viewer for local Codex quota and usage",
+  "type": "module",
+  "scripts": {
+    "release": "powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File ./scripts/release.ps1 -NoOpen",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.10.1"
+  }
+}
