@@ -1,1 +1,1 @@
-# CodexQuotaBar
+# Codex Quota Bar
