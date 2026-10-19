@@ -1,6 +1,30 @@
-# CQBar
+# CQBar（Codex Quota Bar）
 
-CQBar 是 Windows 上的 Codex 额度悬浮窗。它从当前用户的 `~/.codex/auth.json` 读取登录信息，向 ChatGPT 额度接口查询数据，并显示五小时与每周额度。Windows 10 x64 还可使用任务栏 DeskBand；Windows 11 使用悬浮窗。
+CQBar 的名称来自 **Codex Quota Bar**，是一款 Windows 上的 Codex 额度显示工具。它从当前用户的 `~/.codex/auth.json` 读取登录信息，向 ChatGPT 额度接口查询数据，并显示五小时与每周额度。Windows 10 x64 支持任务栏 DeskBand；Windows 11 使用悬浮窗。
+
+[下载 Windows x64 安装包](https://github.com/mrshuangok/CQBar/releases/latest)
+
+## 界面预览
+
+### 任务栏紧凑显示
+
+在 Windows 10 任务栏中并排显示五小时与每周额度。
+
+![任务栏紧凑显示](docs/images/taskbar-compact.png)
+
+### 悬停查看额度详情
+
+将鼠标悬停在任务栏额度上，可查看剩余比例、已用比例和重置时间。界面支持简体中文与英文。
+
+![简体中文额度详情](docs/images/taskbar-hover-zh.png)
+
+![English usage details](docs/images/taskbar-hover-en.png)
+
+### 悬浮窗设置
+
+设置面板可调整自动刷新间隔、显示方式、主题，以及任务栏固定状态。
+
+![CQBar 设置面板](docs/images/settings-panel.png)
 
 ## 从源码运行
 
