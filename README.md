@@ -1,6 +1,6 @@
 # CQBar（Codex Quota Bar）
 
-CQBar 的名称来自 **Codex Quota Bar**，是一款 Windows 上的 Codex 额度显示工具。它从当前用户的 `~/.codex/auth.json` 读取登录信息，向 ChatGPT 额度接口查询数据，并显示五小时与每周额度。Windows 10 x64 支持任务栏 DeskBand；Windows 11 使用悬浮窗。
+CQBar：**Codex Quota Bar**，是一款 Windows 上的 Codex 额度显示工具。它从当前用户的 `~/.codex/auth.json` 读取登录信息，向 ChatGPT 额度接口查询数据，并显示五小时与每周额度。Windows 10 x64 支持任务栏 DeskBand；Windows 11 使用悬浮窗。
 
 [下载 Windows x64 安装包](https://github.com/mrshuangok/CQBar/releases/latest)
 
