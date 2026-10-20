@@ -1,30 +1,44 @@
-# CQBar（Codex Quota Bar）
+# CQBar
 
-CQBar：**Codex Quota Bar**，是一款 Windows 上的 Codex 额度显示工具。它从当前用户的 `~/.codex/auth.json` 读取登录信息，向 ChatGPT 额度接口查询数据，并显示五小时与每周额度。Windows 10 x64 支持任务栏 DeskBand；Windows 11 使用悬浮窗。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-[下载 Windows x64 安装包](https://github.com/mrshuangok/CQBar/releases/latest)
+See your current Codex quota and reset times on the Windows desktop.
 
-## 界面预览
+## Features
+- Shows the current Codex account's five-hour and weekly limits, usage, and reset times.
+- Supports manual and automatic refresh and saved preferences; capsule metrics can switch between usage and reset time, while the tray controls display mode, pinning, and language.
+- Windows 10 x64 can use the taskbar toolbar; Windows 11 can use the floating window.
+- The Windows 10 taskbar hover card shows remaining progress, used percentages, and reset times for both quota windows.
+- One installer includes Simplified Chinese and English interfaces.
 
-### 紧凑显示
+## Requirements
+- Codex must already be signed in on Windows; the app reads the current user's .codex/auth.json.
+- Authentication tokens are not shown in the interface or written to app settings.
 
-紧凑显示提供悬浮窗和任务栏两种形态，展示五小时与每周额度。任务栏形态支持 Windows 10 x64 DeskBand。
+## Install
+- Download the Windows x64 installer from the latest release and run it; administrator permission is required.
+
+## Interface preview
+
+### Compact display
+
+Compact display is available as a floating window or a taskbar toolbar. The taskbar toolbar supports Windows 10 x64.
 
 <table>
   <thead>
-    <tr><th>悬浮窗紧凑显示</th><th>任务栏紧凑显示</th></tr>
+    <tr><th>Floating window</th><th>Taskbar toolbar</th></tr>
   </thead>
   <tbody>
     <tr>
-      <td align="center"><img src="docs/images/floating-compact.png" alt="悬浮窗紧凑显示" width="280"></td>
-      <td align="center"><img src="docs/images/taskbar-compact.png" alt="任务栏紧凑显示" width="280"></td>
+      <td align="center"><img src="docs/images/floating-compact.png" alt="Compact floating window" width="280"></td>
+      <td align="center"><img src="docs/images/taskbar-compact.png" alt="Compact taskbar toolbar" width="280"></td>
     </tr>
   </tbody>
 </table>
 
-### 悬停查看额度详情
+### Taskbar quota details
 
-将鼠标悬停在任务栏额度上，可查看剩余比例、已用比例和重置时间。界面支持简体中文与英文。
+Hover over a taskbar quota to see remaining progress, usage, and reset times.
 
 <table>
   <thead>
@@ -32,35 +46,41 @@ CQBar：**Codex Quota Bar**，是一款 Windows 上的 Codex 额度显示工具�
   </thead>
   <tbody>
     <tr>
-      <td align="center"><img src="docs/images/taskbar-hover-zh.png" alt="简体中文额度详情" width="320"></td>
-      <td align="center"><img src="docs/images/taskbar-hover-en.png" alt="English usage details" width="320"></td>
+      <td align="center"><img src="docs/images/taskbar-hover-zh.png" alt="Usage details in Simplified Chinese" width="320"></td>
+      <td align="center"><img src="docs/images/taskbar-hover-en.png" alt="Usage details in English" width="320"></td>
     </tr>
   </tbody>
 </table>
 
-### 悬浮窗设置
+### Floating window settings
 
-设置面板可调整自动刷新间隔、显示方式、主题，以及任务栏固定状态。
+The settings panel controls the refresh interval, display mode, theme, and taskbar pinning state.
 
-![CQBar 设置面板](docs/images/settings-panel.png)
+![CQBar settings panel](docs/images/settings-panel.png)
 
-## 从源码运行
+## From source
 
-需要 Windows、Node.js、Rust MSVC 工具链、Visual Studio C++ x64 构建工具和 Windows SDK。
+Windows, Node.js, the Rust MSVC toolchain, Visual Studio C++ x64 build tools, and the Windows SDK are required.
 
-```powershell
+Run the app in development:
+
+~~~powershell
 npm ci
 npm run tauri:dev
-```
+~~~
 
-构建 Windows x64 安装包：
+Build the Windows x64 installer:
 
-```powershell
+~~~powershell
 npm run release
-```
+~~~
 
-安装包和 SHA-256 校验文件会生成在 `release/`。安装 DeskBand 需要管理员权限。发布脚本只在本地构建，不会自动上传安装包。
+The installer and SHA-256 checksum file are written to release/. Installing the DeskBand requires administrator permission. The release script builds locally and does not upload the installer.
 
-## 许可证
+## License
 
-MIT，见 [LICENSE](LICENSE)。
+MIT; see [LICENSE](LICENSE).
+
+## Releases and downloads
+- [Release notes for this version](docs/releases/v0.1.0.en.md)
+- [Download the latest release](https://github.com/mrshuangok/CQBar/releases/latest)

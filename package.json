@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "release": "powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File ./scripts/release.ps1 -NoOpen",
+    "docs:generate": "node ./scripts/generate-docs.mjs",
+    "docs:check": "node ./scripts/generate-docs.mjs --check",
     "tauri": "tauri",
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build"

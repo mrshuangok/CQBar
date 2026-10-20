@@ -41,6 +41,8 @@ if ([string]$packageJson.version -ne $version) {
 
 Push-Location $projectRoot
 try {
+    Invoke-CheckedCommand -Executable "npm.cmd" -CommandArguments @("run", "docs:generate")
+
     if (-not (Test-Path -LiteralPath $nodeModulesPath -PathType Container)) {
         Invoke-CheckedCommand -Executable "npm.cmd" -CommandArguments @("ci")
     }
@@ -76,6 +78,15 @@ try {
         $sha256.Dispose()
     }
     "$hash  $releaseName" | Set-Content -LiteralPath (Join-Path $releaseRoot "SHA256SUMS.txt") -Encoding ASCII
+
+    foreach ($locale in @("zh-CN", "en")) {
+        $notesName = "v" + $version + "." + $locale + ".md"
+        $notesPath = Join-Path $projectRoot ("docs\releases\" + $notesName)
+        if (-not (Test-Path -LiteralPath $notesPath -PathType Leaf)) {
+            throw "Generated release notes are missing: $notesPath"
+        }
+        Copy-Item -LiteralPath $notesPath -Destination (Join-Path $releaseRoot $notesName) -Force
+    }
 
     Write-Host "Installer: $destination" -ForegroundColor Green
     Write-Host "SHA-256: $hash"
