@@ -1,4 +1,4 @@
-# CQBar
+# CQBar - Codex Quota Bar 重置吧！
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
